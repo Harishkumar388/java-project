@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Order now!</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="style.css" >
+	<link rel="icon" href="asserts/images/img3.ico" type="image/x-icon">
+</head>
+
+<body>
+
+	<header>
+		<h1>Welcome to Fresh Meat Supply</h1>
+	</header>
+
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="order.html">Order Now</a>
+		<a href="contact.html">Contact Us</a>
+		<a href="about.html">About Us</a>
+	</nav>
+
+	<main>
+		
+
+		<section class="text-banner">
+			<h1 class="gold-text headings">ORDER IN WHATSAPP,<br>or call me anytime
+				<a href="tel:7395836263" class="phone-number" id="phone-number-prices" title="Call phone number">7395836263</a>
+			</h1>
+		</section>
+
+		<form id="quoteForm">
+			<div class="form-group">
+				<label for="name">NAME</label>
+				<input type="text" class="form-control" id="name" placeholder="Your Name" required>
+			</div>
+
+			<div class="form-group">
+				<label for="phone-number">NUMBER</label>
+				<input type="tel" class="form-control" id="phone-number" placeholder="Your mobile number" required>
+			</div>
+
+			<div class="form-group">
+				<label for="MEAT">What are you looking for?</label>
+				<select class="form-control" id="MEAT" required>
+					<option value="">Choose</option>
+					<option>Mutton</option>
+					<option>Country chicken</option>
+					<option>Broiler Chicken</option>
+				</select>
+			</div>
+
+            <div class="form-group">
+				<label for="killo">NUMBER of kg</label>
+				<input type="tel" class="form-control" id="killo" placeholder="kilograms" required>
+			</div>
+
+			<div class="form-group">
+				<label for="message">NOTES</label>
+				<textarea class="form-control" id="message" rows="5" placeholder="Explain how you want your MEAT..." required></textarea>
+			</div>
+
+			<div class="button">
+				<button type="submit" class="btn btn-custom">SUBMIT</button>
+			</div>
+		</form>
+	</main>
+
+	<script>
+	document.getElementById("quoteForm").addEventListener("submit", function(event) {
+		event.preventDefault();
+
+		var name = document.getElementById("name").value.trim();
+		var number = document.getElementById("phone-number").value.trim();
+		var meat = document.getElementById("MEAT").value.trim();
+		var kg = document.getElementById("killo").value.trim();
+		var message = document.getElementById("message").value.trim();
+
+		var whatsappMessage = `Hello, TAKE MYORDER :\n\n- Name: ${name} \n- Number: ${number}\n- Meat: ${meat}\n- Killo: ${kg}\n- Notes: ${message}`;
+
+		var whatsappNumber = "919342513850"; // Use your WhatsApp number here
+		var whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+		window.open(whatsappURL, "_blank");
+	});
+	</script>
+
+</body>
+</html>

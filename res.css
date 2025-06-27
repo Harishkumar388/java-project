@@ -14,14 +14,27 @@
     height: auto;
   }
 
-  nav ul {
+  nav {
     flex-direction: column;
     align-items: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav a:first-child {
+    border-top: none;
   }
 
   .hero {
     text-align: center;
   }
 
-  /* Add more responsive tweaks here  moreeeeeee*/
+  /* Add more responsive tweaks here */
 }

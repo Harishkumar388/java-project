@@ -1,21 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KKK Country Chicken & Mutton Stall</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="res.css" /><!-- new added -->
+  <link rel="stylesheet" href="res.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="icon" href="asserts/images/img3.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="icon" href="asserts/images/img3.ico" type="image/x-icon">
+  <style>
+    /* Background Video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Overlay Content */
+    .main-content {
+      text-align: center;
+      color: white;
+      padding: 80px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ff6347;
+      border-radius: 5px;
+    }
+
+    .gallery-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .gallery-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 20px;
+      }
+
+      .main-content h2 {
+        font-size: 24px;
+      }
+
+      .main-content p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Background Video -->
+  <video autoplay muted loop class="video-bg">
+    <source src="assert/images/videos/vid1.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
   <header>
-    <h1>Welcome to Fresh Meat Supply IN Erode</h1>
+    <h1>Welcome to Fresh Meat Supply in Erode</h1>
   </header>
 
   <nav>
@@ -30,18 +121,18 @@
     <p>ORDER NOW!!!!!!</p>
   </div>
 
-  <!-- Gallery Section -->
   <section class="gallery-section">
-    <h2> Gallery </h2>
+    <h2>Gallery</h2>
     <div class="gallery">
       <img src="assert/images/img1.jpg" alt="Meat 1" class="animate_animated animate_zoomIn" />
       <img src="assert/images/img2.jpg" alt="Meat 2" class="animate_animated animate_zoomIn" />
       <img src="assert/images/img3.jpg" alt="Meat 3" class="animate_animated animate_zoomIn" />
       <img src="assert/images/img4.jpg" alt="Meat 4" class="animate_animated animate_zoomIn" />
-      <img src="assert/images/img5.jpg" alt="Meat 4" class="animate_animated animate_zoomIn" />
-      <img src="assert/images/img6.jpg" alt="Meat 4" class="animate_animated animate_zoomIn" />
-      <img src="assert/images/img7.jpg" alt="Meat 4" class="animate_animated animate_zoomIn" />
-      <img src="assert/images/img8.jpg" alt="Meat 4" class="animate_animated animate_zoomIn" />
+      <img src="assert/images/img5.jpg" alt="Meat 5" class="animate_animated animate_zoomIn" />
+      <img src="assert/images/img6.jpg" alt="Meat 6" class="animate_animated animate_zoomIn" />
+      <img src="assert/images/img7.jpg" alt="Meat 7" class="animate_animated animate_zoomIn" />
+      <img src="assert/images/img8.jpg" alt="Meat 8" class="animate_animated animate_zoomIn" />
+      <img src="assert/images/img9.jpg" alt="Meat 8" class="animate_animated animate_zoomIn" />
     </div>
   </section>
 
